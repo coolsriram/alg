@@ -12,7 +12,8 @@ public class SampleMain {
     public static void main(String[] args){
         System.out.println("Main program comes here..");
 
-        visualAccumulator(10);
+        visualAccumulator(1000);
+        
 
     }
 

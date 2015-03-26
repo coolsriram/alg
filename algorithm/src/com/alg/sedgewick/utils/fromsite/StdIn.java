@@ -66,7 +66,7 @@ public final class StdIn {
     private static final Pattern WHITESPACE_PATTERN = Pattern.compile("\\p{javaWhitespace}+");
 
     // makes whitespace characters significant
-    private static final Pattern EMPTY_PATTERN = Pattern.compile("");
+    private static final Pattern EMPTY_PATTERN = Pattern.compile(",");
 
     // used to read the entire input
     private static final Pattern EVERYTHING_PATTERN = Pattern.compile("\\A");
