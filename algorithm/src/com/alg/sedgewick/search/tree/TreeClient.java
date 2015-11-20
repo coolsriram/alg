@@ -10,6 +10,16 @@ public class TreeClient {
 
         BST<String, String> bstTree = new BST<>();
 
+        bstTree.put("c", "abc");
+        bstTree.put("s", "efg");
+        bstTree.put("p", "abc");
+        bstTree.put("e", "efg");
+        bstTree.put("g", "abc");
+        bstTree.put("q", "efg");
+        bstTree.put("a", "xyz");
 
+
+
+        bstTree.traverseAndPrintInAscOrder();
     }
 }

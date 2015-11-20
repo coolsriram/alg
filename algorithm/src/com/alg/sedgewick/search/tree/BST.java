@@ -75,7 +75,17 @@ public class BST<Key extends Comparable<Key>, Value>
             nodeToReturn.right = put(key, value, node.right);
         }
 
-        nodeToReturn.N = nodeToReturn.left.N + nodeToReturn.right.N + 1;
+        // TODO should be able to do in one line
+        nodeToReturn.N = 1;
+
+        if (nodeToReturn.left != null) {
+            nodeToReturn.N += nodeToReturn.left.N;
+        }
+
+        if (nodeToReturn.right != null) {
+            nodeToReturn.N += nodeToReturn.right.N;
+        }
+
 
         return nodeToReturn;
     }
@@ -91,7 +101,7 @@ public class BST<Key extends Comparable<Key>, Value>
     private void performInOrderTraversal(Node node) {
         if (node != null) {
             performInOrderTraversal(node.left);
-            System.out.println(" ," + node.value + ", ");
+            System.out.print(" ," + node.key + ", ");
             performInOrderTraversal(node.right);
         }
     }
