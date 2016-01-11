@@ -1,10 +1,7 @@
 package com.alg.sedgewick.priority.q;
 
 import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 /**
  * Created by selvarajs on 11/28/15.
@@ -88,6 +85,18 @@ public class PriorityQ<T extends Comparable> {
     }
 
     public static void main(String args[]) {
+
+        System.out.println("." + "abc".substring(0, 0).length() + ".");
+
+        String name = "Sriram";
+        String yourName = "Raj";
+
+
+        String a = String.format("Hi %s, my name is %s", name, yourName);
+
+        System.out.println(a);
+
+        if (true) return;
 
         PriorityQ<Item<String>> pq = new PriorityQ<>(10);
         Item<String> item = null;
