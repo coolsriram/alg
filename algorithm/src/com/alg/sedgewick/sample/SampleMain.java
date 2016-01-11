@@ -4,6 +4,7 @@ import com.alg.sedgewick.utils.fromsite.StdDraw;
 import com.alg.sedgewick.utils.fromsite.StdRandom;
 
 import java.util.Arrays;
+import java.util.HashMap;
 
 /**
  * Created by selvarajs on 2/17/15.
@@ -11,6 +12,17 @@ import java.util.Arrays;
 public class SampleMain {
     public static void main(String[] args){
         System.out.println("Main program comes here..");
+
+        String a = "abc";
+
+        System.out.println(a.substring(3));
+
+        for (int i = 0; i <= a.length(); i++){
+        //    System.out.println(a.substring(0,i) + "d" + a.substring(i));
+        }
+
+
+        if (true) return;
 
         visualAccumulator(1000);
         
