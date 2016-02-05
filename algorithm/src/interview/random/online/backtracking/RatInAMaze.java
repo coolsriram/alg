@@ -11,10 +11,10 @@ public class RatInAMaze {
         System.out.println("Rat in a maze");
 
         int[][] arr = {
-                {1, 0, 0, 0},
-                {1, 1, 0, 1},
-                {0, 1, 0, 1},
-                {0, 1, 1, 1}
+                {1, 0, 0, 0, 0, 1},
+                {1, 1, 1, 1, 0, 1},
+                {0, 0, 0, 1, 0, 1},
+                {0, 1, 1, 1, 1, 1}
         };
 
         int[][] sol = new int[arr.length][arr[0].length];
@@ -23,7 +23,7 @@ public class RatInAMaze {
             Arrays.fill(curRow, 0);
         }
 
-        boolean isSolved = checkRatMaze(1, 3, sol, arr, arr.length - 1, arr[0].length - 1);
+        boolean isSolved = checkRatMaze(0, 0, sol, arr, arr.length - 1, arr[0].length - 1);
 
         if (isSolved){
             System.out.println("Found a path");
