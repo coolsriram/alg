@@ -20,7 +20,7 @@ public class NumberToWord {
 
     public static void main(String[] args) {
 
-        long num = 383953792214L;
+        long num = 953700000L;
         int n = 2147;
         System.out.println("Conversion for " + num + "\n");
         System.out.println(convertToWords(num));

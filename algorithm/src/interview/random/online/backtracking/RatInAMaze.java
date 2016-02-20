@@ -11,10 +11,13 @@ public class RatInAMaze {
         System.out.println("Rat in a maze");
 
         int[][] arr = {
-                {1, 0, 0, 0, 0, 1},
-                {1, 1, 1, 1, 0, 1},
-                {0, 0, 0, 1, 0, 1},
-                {0, 1, 1, 1, 1, 1}
+                {1, 1, 1, 1, 1, 1, 0, 1},
+                {1, 0, 0, 0, 0, 1, 0, 1},
+                {0, 1, 1, 1, 1, 1, 0, 1},
+                {0, 1, 0, 0, 0, 0, 0, 1},
+                {1, 1, 1, 1, 1, 1, 1, 1},
+                {1, 1, 0, 0, 0, 1, 0, 0},
+                {1, 0, 0, 0, 1, 1, 1, 1}
         };
 
         int[][] sol = new int[arr.length][arr[0].length];
@@ -34,7 +37,7 @@ public class RatInAMaze {
     }
 
     public static boolean checkRatMaze(int r, int c, int sol[][], int arr[][], int er, int ec){
-        if ((r > arr.length - 1 || c > arr[0].length - 1) || arr[r][c] == 0){
+        if ((r < 0 || c < 0) ||  (r > arr.length - 1 || c > arr[0].length - 1) || arr[r][c] == 0 || sol[r][c] == 1){
             return false;
         }
 
@@ -50,6 +53,16 @@ public class RatInAMaze {
         if (!isSolved){
             // Move right
             isSolved = checkRatMaze(r, c + 1, sol, arr, er, ec);
+        }
+
+        if (!isSolved){
+            // Move up
+            isSolved = checkRatMaze(r - 1, c, sol, arr, er, ec);
+        }
+
+        if (!isSolved){
+            // Move left
+            isSolved = checkRatMaze(r, c - 1, sol, arr, er, ec);
         }
 
         if (!isSolved){
