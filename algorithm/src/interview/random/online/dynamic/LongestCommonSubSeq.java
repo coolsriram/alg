@@ -1,6 +1,6 @@
 package interview.random.online.dynamic;
 
-import java.util.Arrays;
+import java.util.*;
 
 /**
  * Created by selvarajs on 1/26/16.

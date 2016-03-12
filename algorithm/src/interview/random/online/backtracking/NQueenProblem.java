@@ -48,7 +48,7 @@ public class NQueenProblem {
 
         // check up
         for (int cRow = rowToChk - 1; cRow >= 0; cRow--){
-            if (cRow >= 0 && cRow < rMax && sol[cRow][colToChk] == 1){
+            if (sol[cRow][colToChk] == 1){
                 return false;
             }
         }
@@ -56,7 +56,7 @@ public class NQueenProblem {
         // check diagonal up right
 
         for (int cRow = rowToChk - 1, cCol = colToChk + 1; cRow >= 0 && cCol < cMax; cRow--, cCol++){
-            if (cRow >= 0 && cRow < rMax && cCol >= 0 && cCol < cMax && sol[cRow][cCol] == 1){
+            if (sol[cRow][cCol] == 1){
                 return false;
             }
         }
@@ -64,7 +64,7 @@ public class NQueenProblem {
         // check diagonal up left
 
         for (int cRow = rowToChk - 1, cCol = colToChk - 1; cRow >= 0 && cCol >= 0; cRow--, cCol--){
-            if (cRow >= 0 && cRow < rMax && cCol >= 0 && cCol < cMax && sol[cRow][cCol] == 1){
+            if (sol[cRow][cCol] == 1){
                 return false;
             }
         }

@@ -35,8 +35,8 @@ public class Permutation {
                 }
             }
 
-            // For subset
-            //res.addAll(tempL);
+            // For subset, u dont need a inner loop to add in each position
+//            res.addAll(tempL);
 
             // For permutation
             res = tempL;

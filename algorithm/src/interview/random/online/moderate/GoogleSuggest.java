@@ -12,6 +12,13 @@ public class GoogleSuggest {
     Node root;
 
     public static void main(String[] args) {
+
+        String l = "sriram";
+
+        System.out.println(l.substring(3, 2));
+
+        if (true) return;
+
         GoogleSuggest gs = new GoogleSuggest();
         gs.add("I want icecream");
         gs.add("I want bat");

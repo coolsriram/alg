@@ -24,7 +24,7 @@ public class BuildBinaryTree {
     }
 
     private static Node buildBinaryTree (int[] arr, int low, int high) {
-        System.out.println(low + ", " + high);
+        //System.out.println(low + ", " + high);
 
         if (high < 0 || low > high) {
             return null;
@@ -36,7 +36,7 @@ public class BuildBinaryTree {
 
         int mid = low + ((high - low) / 2);
 
-        System.out.println("\t" + low + ", " + high + ", " + mid);
+        //System.out.println("\t" + low + ", " + high + ", " + mid);
 
         Node parent = new Node(arr[mid]);
 
