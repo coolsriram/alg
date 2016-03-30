@@ -8,6 +8,9 @@ public class RegExp {
         String s = "abbcdacxegfcxifd";
         String p = "ab*cx?fd";
 
+        p = "x*yz";
+        s = "xyz";
+
         System.out.println(isMatch(s, p));
     }
 
